@@ -1,0 +1,66 @@
+body {
+    background-color: #f2ebf5; 
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+#About {
+    text-align: justify;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(20, 185, 108);
+}
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0e3f2f;
+    margin-bottom: 20px;
+}
+
+#Experience ul {
+    padding: 10;
+}
+#Experience li {
+    background-color: #f8f4f7; /* background for list items */
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+#Connect ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#Connect li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#Connect a {
+    font-weight: bold;
+    color: #01803a; /* Darker on hover */
+}
+
+#Connect a:hover {
+    color: #00cc66;
+}
+
+/* STRETCH GOAL: Add a picture of yourself */
+
+#About img {
+    max-width: 150px;
+    border-radius: 5%;
+    margin-bottom: 20px;
+}
