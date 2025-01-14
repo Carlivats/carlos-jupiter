@@ -1,3 +1,20 @@
+nav {
+    background-color: #2c2c2c;
+    position: sticky;
+}
+nav ul {
+    display: flex;
+    justify-content: center; /* Center the nav links */
+}
+nav a {
+    color: white; /* White text for the links */
+    text-decoration: none;
+    padding: 10px 20px;
+}
+nav a:hover {
+    background-color: #555; /* Slightly lighter background on hover */
+}
+
 body {
     background-color: #f2ebf5; 
     color: rgb(0, 0, 0);
@@ -18,7 +35,7 @@ section {
 h1 {
     font-size: 36px;
     font-weight: bold;
-    color: rgb(20, 185, 108);
+    color: rgb(0, 112, 34);
 }
 h2 {
     font-size: 28px;
@@ -27,34 +44,48 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Flexbox layout for Experience section */
 #Experience ul {
-    padding: 10;
-}
-#Experience li {
-    background-color: #f8f4f7; /* background for list items */
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 2px;
-    font-weight: bold;
-}
-
-#Connect ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+
+#Experience li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+#Experience li p {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Connect Section */
+#Connect ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 #Connect li {
-    display: inline-block;
-    margin-right: 20px;
+    list-style: none;
 }
-
 #Connect a {
+    text-decoration: none;
     font-weight: bold;
-    color: #01803a; /* Darker on hover */
+    color: #00662e; 
+    padding: 10px;
 }
-
 #Connect a:hover {
-    color: #00cc66;
+    color: #00cc7e;
 }
 
 /* STRETCH GOAL: Add a picture of yourself */
