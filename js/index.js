@@ -83,3 +83,31 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const GITHUB_USERNAME = "Carlivats";
+
+const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
+
+fetch(API_URL)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Failed to fetch repositories");
+    }
+    return response.json();
+  })
+  .then(repositories => {
+    console.log(repositories); // View the data in the console
+
+    const projectSection = document.getElementById("Projects"); // Select the Projects section
+    const projectList = projectSection.querySelector("ul"); // Select the <ul> inside the Projects section
+
+    repositories.forEach(repo => {
+      const project = document.createElement("li");
+      project.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+      projectList.appendChild(project);
+    });
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    const projectSection = document.getElementById("Projects");
+    projectSection.innerHTML += `<p style="color: red;">Error fetching repositories. Please try again later.</p>`;
+  });
