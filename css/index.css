@@ -98,10 +98,6 @@ h2 {
     text-align: center;
 }
 
-#Skills li:hover {
-    background-color: #5dd392;
-}
-
 /* Connect Section */
 #Connect ul {
     display: flex;
@@ -131,6 +127,30 @@ h2 {
 }
 
 #Connect li:hover {
+    background-color: #5dd392;
+}
+
+#Projects ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  #Projects li {
+    background-color: #37be74;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  #Projects a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #Projects li:hover {
     background-color: #5dd392;
 }
 
